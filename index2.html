@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title># TicTacToe #</title>
+        
+        <meta name="viewport" content="width=640, user-scalable=no" />
+        <meta name="description" content="Tic-Tac-Toe online game written entirely in HTML5, CSS3, JS, and jQuery open source technology languages for a COX Communication's coding test">
+    	<meta name="generator" content="TextMate http://macromates.com/">
+    	<meta name="author" content="Adam Fields">
+
+        <link rel="icon" href="/COX_TTT/favicon2.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Rock+Salt'>
+        
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="container">
+            <div id="TicTacToe">
+                <div id="XandO">
+                    <img id="sq1" src="img/TTT_N.gif" width="65" height="71" title="Click here to place your X" data-state="N" />
+                    <img id="sq2" src="img/TTT_N.gif" width="65" height="71" title="Click here to place your X" data-state="N" />
+                    <img id="sq3" src="img/TTT_N.gif" width="65" height="71" title="Click here to place your X" data-state="N" />
+                    <img id="sq4" src="img/TTT_N.gif" width="65" height="71" title="Click here to place your X" data-state="N" />
+                    <img id="sq5" src="img/TTT_N.gif" width="65" height="71" title="Click here to place your X" data-state="N" />
+                    <img id="sq6" src="img/TTT_N.gif" width="65" height="71" title="Click here to place your X" data-state="N" />
+                    <img id="sq7" src="img/TTT_N.gif" width="65" height="71" title="Click here to place your X" data-state="N" />
+                    <img id="sq8" src="img/TTT_N.gif" width="65" height="71" title="Click here to place your X" data-state="N" />
+                    <img id="sq9" src="img/TTT_N.gif" width="65" height="71" title="Click here to place your X" data-state="N" />
+                </div>
+                <div id="crossMarks">
+                    <img id="CM_anim" src="img/TTT_CrossMarks.gif" alt="TTT CrossMarks" />
+                </div>
+                <div id="buttonRow">
+                    <a href="#" onclick="return false;" id="easy" class="active" title="Click here to make the game easier.">Easy</a>&nbsp; &nbsp; &nbsp; &nbsp;
+                    <a href="#" onclick="return false;" id="hard" class="" title="Click here to make the game harder.">Hard</a>&nbsp; &nbsp; &nbsp; &nbsp;
+                    <a href="#" onclick="return false;" id="reset" title="Click here to start a new game.">New Game</a>
+                </div>
+                <div id="messageArea">
+                    <br />
+                    <span id="title">Welcome!</span><br />
+                    <span id="body">Since you're our guest,<br />
+                    you get to go first...</span>
+                </div>
+                <div id="scoreBoard">
+                    My Score<hr /><span id="myScore">0</span><br /><br />Computer Score<hr /><span id="compScore">0</span>
+                </div>
+                <div id="gameTitle">Tic-Tac-Toe</div>
+			</div>
+            <div id="strike_Top" class="strikers"><img src="img/TTT_Horiz.gif" width="400" height="47"></div>
+            <div id="strike_Middle" class="strikers"><img src="img/TTT_Horiz.gif" width="400" height="47"></div>
+            <div id="strike_Bottom" class="strikers"><img src="img/TTT_Horiz.gif" width="400" height="47"></div>
+            <div id="strike_Left" class="strikers"><img src="img/TTT_Verti.gif" width="60" height="317"></div>
+            <div id="strike_Center" class="strikers"><img src="img/TTT_Verti.gif" width="60" height="317"></div>
+            <div id="strike_Right" class="strikers"><img src="img/TTT_Verti.gif" width="60" height="317"></div>
+            <div id="strike_Diag1" class="strikers"><img src="img/TTT_Diag1.gif" width="330" height="310"></div>
+            <div id="strike_Diag2" class="strikers"><img src="img/TTT_Diag2.gif" width="385" height="325"></div>
+            <div id="strike_Draw" class="strikers"><img src="img/TTT_Draw.gif" width="385" height="325"></div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>');</script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments);});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r);}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
