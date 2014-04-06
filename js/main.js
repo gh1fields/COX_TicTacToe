@@ -19,7 +19,7 @@ var sqr1 = $("img#sq1").data(),
     difficulty = 1,
     myWins = 0,
     compWins = 0,
-    strikeItem = "";
+    strikerID = "";
 
 // Initialize button functionality
 $('#buttonRow a#easy').click(function() {
@@ -79,7 +79,7 @@ function threeInARow(XorO) {
     }
     if(numX + numO == 11) {
         $("#strike_Draw").fadeIn();
-        strikeItem = "Draw";
+        strikerID = "Draw";
         updateMessage('NoWins');
         return true;
     }
@@ -196,14 +196,14 @@ function setO(num) {
 // Place blinking strike-through to indicate win and where
 function striker(XorO) {
     var winner = XorO + XorO + XorO;
-    if(     sqr1.state + sqr2.state + sqr3.state == winner) { $("#strike_Top").fadeIn().css('display','inline'); strikeItem = "Top"; }
-    else if(sqr1.state + sqr4.state + sqr7.state == winner) { $("#strike_Left").fadeIn().css('display','inline'); strikeItem = "Left"; }
-    else if(sqr1.state + sqr5.state + sqr9.state == winner) { $("#strike_Diag1").fadeIn().css('display','inline'); strikeItem = "Diag1"; }
-    else if(sqr2.state + sqr5.state + sqr8.state == winner) { $("#strike_Center").fadeIn().css('display','inline'); strikeItem = "Center"; }
-    else if(sqr3.state + sqr6.state + sqr9.state == winner) { $("#strike_Right").fadeIn().css('display','inline'); strikeItem = "Right"; }
-    else if(sqr3.state + sqr5.state + sqr7.state == winner) { $("#strike_Diag2").fadeIn().css('display','inline'); strikeItem = "Diag2"; }
-    else if(sqr4.state + sqr5.state + sqr6.state == winner) { $("#strike_Middle").fadeIn().css('display','inline'); strikeItem = "Middle"; }
-    else if(sqr7.state + sqr8.state + sqr9.state == winner) { $("#strike_Bottom").fadeIn().css('display','inline'); strikeItem = "Bottom"; }
+    if(     sqr1.state + sqr2.state + sqr3.state == winner) { $("#strike_Top").fadeIn().css('display','inline'); strikerID = "Top"; }
+    else if(sqr1.state + sqr4.state + sqr7.state == winner) { $("#strike_Left").fadeIn().css('display','inline'); strikerID = "Left"; }
+    else if(sqr1.state + sqr5.state + sqr9.state == winner) { $("#strike_Diag1").fadeIn().css('display','inline'); strikerID = "Diag1"; }
+    else if(sqr2.state + sqr5.state + sqr8.state == winner) { $("#strike_Center").fadeIn().css('display','inline'); strikerID = "Center"; }
+    else if(sqr3.state + sqr6.state + sqr9.state == winner) { $("#strike_Right").fadeIn().css('display','inline'); strikerID = "Right"; }
+    else if(sqr3.state + sqr5.state + sqr7.state == winner) { $("#strike_Diag2").fadeIn().css('display','inline'); strikerID = "Diag2"; }
+    else if(sqr4.state + sqr5.state + sqr6.state == winner) { $("#strike_Middle").fadeIn().css('display','inline'); strikerID = "Middle"; }
+    else if(sqr7.state + sqr8.state + sqr9.state == winner) { $("#strike_Bottom").fadeIn().css('display','inline'); strikerID = "Bottom"; }
 }
 
 // Maintain scoreboard stats
@@ -226,7 +226,7 @@ function reset() {
     $('#XandO img').attr('title','Click here to place your X');
     numX = 1;
     numO = 1;
-    $("#strike_"+strikeItem).hide();
+    $("#strike_"+strikerID).hide();
     updateMessage('NewGame');
     chooseX();
 }
